@@ -1,0 +1,57 @@
+{
+  "name": "redux-toolkit-login-flow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A potentially reusable formalized login flow pattern for crafting web development project",
+  "keywords": [
+    "login flow",
+    "formalized pattern",
+    "redux toolkit app",
+    "react app",
+    "react router app",
+    "web craftmanship"
+  ],
+  "homepage": "https://github.com/dwiyatci/redux-toolkit-login-flow",
+  "bugs": "https://github.com/dwiyatci/redux-toolkit-login-flow/issues",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "author": "Glenn Dwiyatcita <gmd@email.com> (https://tiny.cc/dwiyatci)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwiyatci/redux-toolkit-login-flow.git"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.3.4",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.3.2",
+    "@testing-library/user-event": "7.1.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.1.3",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "prettier": "2.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

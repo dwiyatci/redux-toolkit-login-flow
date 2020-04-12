@@ -1,0 +1,32 @@
+@startuml
+start
+
+:visit page;
+if (isAuthenticated?) then (yes)
+  'auth.isAuthenticated()
+  'token exists in sessionStorage or localStorage?
+  'sessionStorage.get(TOKEN_KEY) || localStorage.get(TOKEN_KEY)
+  -> ;
+else (no)
+  repeat
+    :show login page;
+    :do login;
+    'auth.doLogin(rememberMe)
+  repeat while (login succeeded?) is (no)
+  -> yes;
+  if (rememberMe?) then (yes)
+    'auth.rememberMeChecked()
+    :set token in localStorage;
+  else (no)
+    :set token in sessionStorage;
+  endif
+endif
+
+if (page is index?) then (yes)
+  :show landing page;
+else (no)
+  :show page;
+endif
+
+stop
+@enduml
