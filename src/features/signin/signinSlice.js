@@ -10,7 +10,7 @@ export const checkAuth = createAsyncThunk('signin/checkAuth', async () => {
     return { token, user };
   }
 
-  return {};
+  return { token: null, user: null };
 });
 
 export const login = createAsyncThunk('signin/login', auth.login);
@@ -18,11 +18,11 @@ export const login = createAsyncThunk('signin/login', auth.login);
 export const logout = createAsyncThunk('signin/logout', auth.logout);
 
 const initialState = {
-  loading: false,
-  error: undefined,
+  loading: true,
+  error: null,
   loggedIn: false,
-  loggedInUser: undefined,
-  token: undefined,
+  loggedInUser: null,
+  token: null,
 };
 
 export const signinSlice = createSlice({
@@ -32,11 +32,11 @@ export const signinSlice = createSlice({
   extraReducers: {
     [checkAuth.pending]: startLoading,
     [checkAuth.fulfilled]: (state, { payload }) => {
-      const { token, user } = payload;
+      const { token = null, user = null } = payload;
 
       Object.assign(state, {
         loading: false,
-        error: undefined,
+        error: null,
         loggedIn: !!token,
         loggedInUser: user,
         token,
@@ -53,19 +53,25 @@ export const signinSlice = createSlice({
         loggedIn: true,
         loggedInUser: user,
         token,
-        error: undefined,
       });
     },
     [login.rejected]: receiveError,
 
     [logout.pending]: startLoading,
-    [logout.fulfilled]: (state) => Object.assign(state, initialState),
+    [logout.fulfilled]: (state) =>
+      Object.assign(state, {
+        ...initialState,
+        loading: false,
+      }),
     [logout.rejected]: receiveError,
   },
 });
 
 function startLoading(state) {
-  state.loading = true;
+  Object.assign(state, {
+    loading: true,
+    error: null,
+  });
 }
 
 function receiveError(state, action) {

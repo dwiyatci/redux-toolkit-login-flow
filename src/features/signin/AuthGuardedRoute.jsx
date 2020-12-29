@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, Route, useHistory } from 'react-router-dom';
 import { Error } from '../../common/Error';
@@ -18,8 +18,8 @@ export function AuthGuardedRoute({ children, ...rest }) {
     <Loading />
   ) : (
     <>
-      <Route {...rest} render={({ location }) => renderRoutedComponent(location)} />
       {error && <Error message={error.message} />}
+      <Route {...rest} render={({ location }) => renderRoutedComponent(location)} />
     </>
   );
 
