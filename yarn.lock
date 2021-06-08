@@ -2441,10 +2441,10 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@reduxjs/toolkit@next":
-  version "1.6.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.6.0-beta.0.tgz#634f9e7f32df3d242bb1f2fc9c6e4a35e61c0a27"
-  integrity sha512-cCW6iYoMv4YPhZHx5ExAMRkpAGKr00THQJpRYjdmMyRh1rMoHRRO69gYvwoMoTjgtFwNw+4D0tgDTJ92/jf5Lw==
+"@reduxjs/toolkit@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.6.0.tgz#0a17c6941c57341f8b31e982352b495ab69d5add"
+  integrity sha512-eGL50G+Vj5AG5uD0lineb6rRtbs96M8+hxbcwkHpZ8LQcmt0Bm33WyBSnj5AweLkjQ7ZP+KFRDHiLMznljRQ3A==
   dependencies:
     immer "^9.0.1"
     redux "^4.1.0"
@@ -2618,10 +2618,10 @@
     lz-string "^1.4.4"
     pretty-format "^26.6.2"
 
-"@testing-library/jest-dom@5.12.0":
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.12.0.tgz#6a5d340b092c44b7bce17a4791b47d9bc2c61443"
-  integrity sha512-N9Y82b2Z3j6wzIoAqajlKVF1Zt7sOH0pPee0sUHXHc5cv2Fdn23r+vpWm0MBBoGJtPOly5+Bdx1lnc3CD+A+ow==
+"@testing-library/jest-dom@5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.13.0.tgz#0a365684e2c1159f857f5915be50089fc5657df0"
+  integrity sha512-+jXXTn8GjRnZkJfzG/tqK/2Q7dGlBInR412WE7Aml7CT3wdSpx5dMQC0HOwVQoZ3cNTmQUy8fCVGUV/Zhoyvcw==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -10051,10 +10051,10 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-prettier@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
-  integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
+prettier@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
+  integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
 
 pretty-bytes@^5.3.0:
   version "5.5.0"
