@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router-dom';
+
 import { DummyPage } from '../common/DummyPage';
 import { LandingPage } from '../common/LandingPage';
 import { NotFoundPage } from '../common/NotFoundPage';
-import { AuthGuardedRoute } from '../features/signin/AuthGuardedRoute';
+import { AuthGuardedComponent } from '../features/signin/AuthGuardedComponent';
 import { LoginPage } from '../features/signin/LoginPage';
 
 function App() {
@@ -20,20 +21,27 @@ function App() {
         </ul>
       </nav>
 
-      <Switch>
-        <AuthGuardedRoute exact path={['/', '/index.html']}>
-          <LandingPage />
-        </AuthGuardedRoute>
-        <AuthGuardedRoute path={['/dummy', '/wtfk']}>
-          <DummyPage />
-        </AuthGuardedRoute>
-        <AuthGuardedRoute path="/login">
-          <LoginPage />
-        </AuthGuardedRoute>
-        <Route path="*">
-          <NotFoundPage />
-        </Route>
-      </Switch>
+      <Routes>
+        {['/', '/index.html'].map((path) => (
+          <Route
+            key={path}
+            path={path}
+            element={<AuthGuardedComponent element={<LandingPage />} />}
+          />
+        ))}
+
+        {['/dummy', '/wtfk'].map((path) => (
+          <Route
+            key={path}
+            path={path}
+            element={<AuthGuardedComponent element={<DummyPage />} />}
+          />
+        ))}
+
+        <Route path="/login" element={<AuthGuardedComponent element={<LoginPage />} />} />
+
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </div>
   );
 }
