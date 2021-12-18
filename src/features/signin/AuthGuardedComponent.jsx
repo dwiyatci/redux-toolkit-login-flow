@@ -6,7 +6,7 @@ import { Error } from '../../common/Error';
 import { Loading } from '../../common/Loading';
 import { checkAuth, logout, selectSignin } from './signinSlice';
 
-export function AuthGuardedComponent({ element }) {
+export function AuthGuardedComponent({ children }) {
   const { loading, loggedIn, error } = useSelector(selectSignin);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ export function AuthGuardedComponent({ element }) {
 
       return (
         <>
-          {element}
+          {children}
           <button
             onClick={async () => {
               await dispatch(logout());
@@ -50,7 +50,7 @@ export function AuthGuardedComponent({ element }) {
       );
     } else {
       if (isLoginPagePathname) {
-        return element;
+        return children;
       }
 
       return <Navigate to="/login" state={{ from: location }} replace />;

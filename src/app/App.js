@@ -26,7 +26,11 @@ function App() {
           <Route
             key={path}
             path={path}
-            element={<AuthGuardedComponent element={<LandingPage />} />}
+            element={
+              <AuthGuardedComponent>
+                <LandingPage />
+              </AuthGuardedComponent>
+            }
           />
         ))}
 
@@ -34,11 +38,22 @@ function App() {
           <Route
             key={path}
             path={path}
-            element={<AuthGuardedComponent element={<DummyPage />} />}
+            element={
+              <AuthGuardedComponent>
+                <DummyPage />
+              </AuthGuardedComponent>
+            }
           />
         ))}
 
-        <Route path="/login" element={<AuthGuardedComponent element={<LoginPage />} />} />
+        <Route
+          path="/login"
+          element={
+            <AuthGuardedComponent>
+              <LoginPage />
+            </AuthGuardedComponent>
+          }
+        />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
