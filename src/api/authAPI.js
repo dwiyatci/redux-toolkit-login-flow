@@ -1,4 +1,5 @@
 import { nanoid } from '@reduxjs/toolkit';
+
 import { NETWORK_LATENCY } from '../utils/constants';
 import { getUser } from './userAPI';
 

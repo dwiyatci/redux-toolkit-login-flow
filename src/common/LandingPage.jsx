@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { selectSignin } from '../features/signin/signinSlice';
 
+import { selectSignin } from '../features/signin/signinSlice';
 import bender from './bender.png';
 
 export function LandingPage() {

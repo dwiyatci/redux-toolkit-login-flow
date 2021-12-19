@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 import { login } from './signinSlice';
 
 export function LoginPage() {
@@ -10,9 +11,9 @@ export function LoginPage() {
     rememberMe: false,
   });
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
-  const { from } = location.state || { from: { pathname: '/' } };
+  const { from = { pathname: '/' } } = location.state;
 
   return (
     <div className="page-login">
@@ -70,6 +71,6 @@ export function LoginPage() {
     event.preventDefault();
     await dispatch(login(formState));
 
-    history.replace(from);
+    navigate(from, { replace: true });
   }
 }

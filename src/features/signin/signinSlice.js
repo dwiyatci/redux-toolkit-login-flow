@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
 import { getCurrentUser } from '../../api/userAPI';
 import { auth } from '../../utils/auth';
 

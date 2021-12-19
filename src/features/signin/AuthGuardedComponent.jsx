@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect, Route, useHistory } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+
 import { Error } from '../../common/Error';
 import { Loading } from '../../common/Loading';
 import { checkAuth, logout, selectSignin } from './signinSlice';
 
-export function AuthGuardedRoute({ children, ...rest }) {
+export function AuthGuardedComponent({ children }) {
   const { loading, loggedIn, error } = useSelector(selectSignin);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(checkAuth());
@@ -19,25 +20,19 @@ export function AuthGuardedRoute({ children, ...rest }) {
   ) : (
     <>
       {error && <Error message={error.message} />}
-      <Route {...rest} render={({ location }) => renderRoutedComponent(location)} />
+      <RoutedComponent />
     </>
   );
 
-  function renderRoutedComponent(location) {
+  function RoutedComponent() {
+    const location = useLocation();
     const isLoginPagePathname = location.pathname.includes('login');
 
     if (loggedIn) {
       if (isLoginPagePathname) {
-        const { from } = location.state || { from: { pathname: '/' } };
+        const { from = { pathname: '/' } } = location.state;
 
-        return (
-          <Redirect
-            to={{
-              pathname: from.pathname,
-              state: { from },
-            }}
-          />
-        );
+        return <Navigate to={from.pathname} state={{ from }} replace />;
       }
 
       return (
@@ -46,7 +41,7 @@ export function AuthGuardedRoute({ children, ...rest }) {
           <button
             onClick={async () => {
               await dispatch(logout());
-              history.push('/');
+              navigate('/');
             }}
           >
             Log Out
@@ -58,14 +53,7 @@ export function AuthGuardedRoute({ children, ...rest }) {
         return children;
       }
 
-      return (
-        <Redirect
-          to={{
-            pathname: '/login',
-            state: { from: location },
-          }}
-        />
-      );
+      return <Navigate to="/login" state={{ from: location }} replace />;
     }
   }
 }
