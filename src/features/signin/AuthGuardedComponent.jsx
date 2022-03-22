@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 import { Error } from '../../common/Error';
 import { Loading } from '../../common/Loading';
 import { checkAuth, logout, selectSignin } from './signinSlice';
 
-export function AuthGuardedComponent({ children }) {
+export function AuthGuardedComponent() {
   const { loading, loggedIn, error } = useSelector(selectSignin);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ export function AuthGuardedComponent({ children }) {
 
       return (
         <>
-          {children}
+          <Outlet />
           <button
             onClick={async () => {
               await dispatch(logout());
@@ -50,7 +50,7 @@ export function AuthGuardedComponent({ children }) {
       );
     } else {
       if (isLoginPagePathname) {
-        return children;
+        return <Outlet />;
       }
 
       return <Navigate to="/login" state={{ from: location }} replace />;
