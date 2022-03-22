@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 import { DummyPage } from '../common/DummyPage';
@@ -22,38 +21,17 @@ function App() {
       </nav>
 
       <Routes>
-        {['/', '/index.html'].map((path) => (
-          <Route
-            key={path}
-            path={path}
-            element={
-              <AuthGuardedComponent>
-                <LandingPage />
-              </AuthGuardedComponent>
-            }
-          />
-        ))}
+        <Route element={<AuthGuardedComponent />}>
+          {['/', '/index.html'].map((path) => (
+            <Route key={path} path={path} element={<LandingPage />} />
+          ))}
 
-        {['/dummy', '/wtfk'].map((path) => (
-          <Route
-            key={path}
-            path={path}
-            element={
-              <AuthGuardedComponent>
-                <DummyPage />
-              </AuthGuardedComponent>
-            }
-          />
-        ))}
+          {['/dummy', '/wtfk'].map((path) => (
+            <Route key={path} path={path} element={<DummyPage />} />
+          ))}
 
-        <Route
-          path="/login"
-          element={
-            <AuthGuardedComponent>
-              <LoginPage />
-            </AuthGuardedComponent>
-          }
-        />
+          <Route path="/login" element={<LoginPage />} />
+        </Route>
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
