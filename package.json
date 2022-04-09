@@ -19,18 +19,18 @@
     "url": "https://github.com/dwiyatci/redux-toolkit-login-flow.git"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "1.8.0",
-    "@testing-library/jest-dom": "5.16.2",
-    "@testing-library/react": "12.1.4",
-    "@testing-library/user-event": "13.5.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-redux": "7.2.6",
-    "react-router-dom": "6.2.2",
+    "@reduxjs/toolkit": "1.8.1",
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "13.0.0",
+    "@testing-library/user-event": "14.0.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-redux": "8.0.0-beta.3",
+    "react-router-dom": "6.3.0",
     "react-scripts": "5.0.0"
   },
   "devDependencies": {
-    "prettier": "2.6.0"
+    "prettier": "2.6.2"
   },
   "scripts": {
     "up": "yarn upgrade-interactive --latest",
@@ -57,7 +57,7 @@
     ]
   },
   "volta": {
-    "node": "16.13.1",
-    "npm": "8.1.2"
+    "node": "16.14.2",
+    "npm": "8.5.0"
   }
 }
