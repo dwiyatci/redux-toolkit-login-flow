@@ -1,4 +1,9 @@
 @startuml
+'https://plantuml.com/skinparam
+skinparam handwritten true
+'https://virgil.excalidraw.com/
+skinparam defaultFontName Virgil 3 YOFF
+
 start
 
 :visit page;
