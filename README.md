@@ -16,7 +16,7 @@ As you might have seen, this app is built with a very bare minimum, if not none,
 
 I tried to formalize the flow back in the last quarter of 2019 and realised it using this very cool project called [PlantUML](https://plantuml.com/). So this is what I think that works for me in 80% of the cases:
 
-![The login flowchart](artifacts/login-flow.png)
+![The login flowchart](artifacts/login-flow-handwritten.png)
 
 The PlantUML source code is available [here](artifacts/login-flow.puml) in the artifacts directory.
 
