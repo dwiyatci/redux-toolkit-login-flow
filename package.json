@@ -1,6 +1,6 @@
 {
   "name": "redux-toolkit-login-flow",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "A potentially reusable formalized login flow pattern for crafting web development project",
   "keywords": [
@@ -18,28 +18,28 @@
     "type": "git",
     "url": "https://github.com/dwiyatci/redux-toolkit-login-flow.git"
   },
-  "dependencies": {
-    "@reduxjs/toolkit": "1.8.1",
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.1.1",
-    "@testing-library/user-event": "14.1.1",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-redux": "8.0.0",
-    "react-router-dom": "6.3.0",
-    "react-scripts": "5.0.1"
-  },
-  "devDependencies": {
-    "prettier": "2.6.2"
-  },
   "scripts": {
-    "up": "yarn upgrade-interactive --latest",
+    "upgr": "pnpm upgrade --recursive --latest --interactive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,css,less,sass,scss,md,sh,graphql,gql}\"",
     "format:check": "prettier --list-different \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,less,sass,scss,md,sh,graphql,gql}\""
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.8.5",
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "13.3.0",
+    "@testing-library/user-event": "14.4.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-redux": "8.0.2",
+    "react-router-dom": "6.3.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -59,6 +59,6 @@
   "volta": {
     "node": "18.0.0",
     "npm": "8.6.0",
-    "yarn": "1.22.18"
+    "pnpm": "7.9.3"
   }
 }

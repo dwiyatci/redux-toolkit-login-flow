@@ -30,41 +30,45 @@ export const signinSlice = createSlice({
   name: 'signin',
   initialState,
   reducers: {},
-  extraReducers: {
-    [checkAuth.pending]: startLoading,
-    [checkAuth.fulfilled]: (state, { payload }) => {
-      const { token = null, user = null } = payload;
+  extraReducers: (builder) => {
+    builder
+      .addCase(checkAuth.pending, startLoading)
+      .addCase(checkAuth.fulfilled, (state, { payload }) => {
+        const { token = null, user = null } = payload;
 
-      Object.assign(state, {
-        loading: false,
-        error: null,
-        loggedIn: !!token,
-        loggedInUser: user,
-        token,
-      });
-    },
-    [checkAuth.rejected]: receiveError,
+        Object.assign(state, {
+          loading: false,
+          error: null,
+          loggedIn: !!token,
+          loggedInUser: user,
+          token,
+        });
+      })
+      .addCase(checkAuth.rejected, receiveError);
 
-    [login.pending]: startLoading,
-    [login.fulfilled]: (state, { payload }) => {
-      const { token, user } = payload;
+    builder
+      .addCase(login.pending, startLoading)
+      .addCase(login.fulfilled, (state, { payload }) => {
+        const { token, user } = payload;
 
-      Object.assign(state, {
-        loading: false,
-        loggedIn: true,
-        loggedInUser: user,
-        token,
-      });
-    },
-    [login.rejected]: receiveError,
+        Object.assign(state, {
+          loading: false,
+          loggedIn: true,
+          loggedInUser: user,
+          token,
+        });
+      })
+      .addCase(login.rejected, receiveError);
 
-    [logout.pending]: startLoading,
-    [logout.fulfilled]: (state) =>
-      Object.assign(state, {
-        ...initialState,
-        loading: false,
-      }),
-    [logout.rejected]: receiveError,
+    builder
+      .addCase(logout.pending, startLoading)
+      .addCase(logout.fulfilled, (state) =>
+        Object.assign(state, {
+          ...initialState,
+          loading: false,
+        })
+      )
+      .addCase(logout.rejected, receiveError);
   },
 });
 
