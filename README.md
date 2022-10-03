@@ -23,7 +23,7 @@ The PlantUML source code is available [here](artifacts/login-flow.puml) in the a
 ## Spinning up the development server
 
 ```bash
-$ yarn start
+$ pnpm start
 ```
 
 You can find other runnable scripts in [package.json](package.json).
