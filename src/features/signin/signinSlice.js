@@ -66,7 +66,7 @@ export const signinSlice = createSlice({
         Object.assign(state, {
           ...initialState,
           loading: false,
-        })
+        }),
       )
       .addCase(logout.rejected, receiveError);
   },

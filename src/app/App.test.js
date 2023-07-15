@@ -11,7 +11,7 @@ test('renders Home link', async () => {
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
+    </Provider>,
   );
 
   await waitFor(() => {
