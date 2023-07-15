@@ -19,8 +19,8 @@ export function signin({ username, password }, apiContext = {}) {
 
       return reject(
         new Error(
-          'Invalid username and password. Please login with (username: glenn, password: koifish). 😌🐡'
-        )
+          'Invalid username and password. Please login with (username: glenn, password: koifish). 😌🐡',
+        ),
       );
     }, NETWORK_LATENCY);
   });
