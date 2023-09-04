@@ -19,16 +19,22 @@
     "url": "https://github.com/dwiyatci/redux-toolkit-login-flow.git"
   },
   "scripts": {
+    "install:clean:hardcore": "pnpm dlx rimraf node_modules && pnpm install:clean",
+    "install:clean": "pnpm dedupe && pnpm install",
     "upgr": "pnpm upgrade --recursive --latest --interactive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "rspack:start": "rspack serve",
+    "rspack:build": "rspack build",
     "format": "prettier --write \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,css,less,sass,scss,md,sh,graphql,gql}\"",
     "format:check": "prettier --list-different \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,less,sass,scss,md,sh,graphql,gql}\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.9.5",
+    "@rspack/cli": "0.3.1",
+    "@rspack/plugin-html": "0.3.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
