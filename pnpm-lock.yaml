@@ -4744,13 +4744,14 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: false
 
-  /follow-redirects@1.10.0:
-    resolution: {integrity: sha512-4eyLK6s6lH32nOvLLwlIOnr9zrL8Sm+OvW4pVTJNoXeGzYIkHVf+pADQi+OJ0E67hiuSLezPVPyBcIZO50TmmQ==}
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
-    dependencies:
-      debug: 3.2.7
-    transitivePeerDependencies:
-      - supports-color
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /for-each@0.3.3:
@@ -5189,7 +5190,7 @@ packages:
       is-plain-obj: 3.0.0
       micromatch: 4.0.5
     transitivePeerDependencies:
-      - supports-color
+      - debug
     dev: false
 
   /http-proxy@1.18.1:
@@ -5197,10 +5198,10 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.0
-      follow-redirects: 1.10.0
+      follow-redirects: 1.15.6
       requires-port: 1.0.0
     transitivePeerDependencies:
-      - supports-color
+      - debug
     dev: false
 
   /https-proxy-agent@5.0.0:
@@ -8101,6 +8102,7 @@ packages:
       - canvas
       - clean-css
       - csso
+      - debug
       - esbuild
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -9484,6 +9486,7 @@ packages:
       ws: 8.3.0
     transitivePeerDependencies:
       - bufferutil
+      - debug
       - supports-color
       - utf-8-validate
     dev: false
