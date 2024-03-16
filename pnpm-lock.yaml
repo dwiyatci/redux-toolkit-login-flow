@@ -31,7 +31,7 @@ dependencies:
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
   react-scripts:
     specifier: 5.0.1
-    version: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(acorn@8.11.3)(autoprefixer@10.4.18)(eslint@8.57.0)(react@18.2.0)(typescript@5.4.2)
+    version: 5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(autoprefixer@10.4.18)(eslint@8.57.0)(react@18.2.0)(typescript@5.4.2)
 
 devDependencies:
   prettier:
@@ -5183,7 +5183,7 @@ packages:
     resolution: {integrity: sha512-a4u9BeERWGu/S8JiWEAQcdrg9v4QArtP9keViQjGMdff20fBdd8waotXaNmODqBe6uZ3Nafi7K/ho4gCQHV3Ig==}
     dev: false
 
-  /html-minifier-terser@6.1.0(acorn@8.11.3):
+  /html-minifier-terser@6.1.0:
     resolution: {integrity: sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw==}
     engines: {node: '>=12'}
     hasBin: true
@@ -5194,25 +5194,21 @@ packages:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.10.0(acorn@8.11.3)
-    transitivePeerDependencies:
-      - acorn
+      terser: 5.29.2
     dev: false
 
-  /html-webpack-plugin@5.5.0(acorn@8.11.3)(webpack@5.90.3):
+  /html-webpack-plugin@5.5.0(webpack@5.90.3):
     resolution: {integrity: sha512-sy88PC2cRTVxvETRgUHFrL4No3UxvcH8G1NepGhqaTT+GXN2kTamqasot0inS5hXeg1cMbFDt27zzo9p35lZVw==}
     engines: {node: '>=10.13.0'}
     peerDependencies:
       webpack: ^5.20.0
     dependencies:
       '@types/html-minifier-terser': 6.1.0
-      html-minifier-terser: 6.1.0(acorn@8.11.3)
+      html-minifier-terser: 6.1.0
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
       webpack: 5.90.3
-    transitivePeerDependencies:
-      - acorn
     dev: false
 
   /htmlparser2@6.1.0:
@@ -8130,7 +8126,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(acorn@8.11.3)(autoprefixer@10.4.18)(eslint@8.57.0)(react@18.2.0)(typescript@5.4.2):
+  /react-scripts@5.0.1(@babel/plugin-syntax-flow@7.23.3)(@babel/plugin-transform-react-jsx@7.23.4)(autoprefixer@10.4.18)(eslint@8.57.0)(react@18.2.0)(typescript@5.4.2):
     resolution: {integrity: sha512-8VAmEm/ZAwQzJ+GOMLbBsTdDKOpuZh7RPs0UymvBR2vRk4iZWCskjbFnxqjrzoIvlNNRZ3QJFx6/qDSi6zSnaQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -8162,7 +8158,7 @@ packages:
       eslint-webpack-plugin: 3.1.1(eslint@8.57.0)(webpack@5.90.3)
       file-loader: 6.2.0(webpack@5.90.3)
       fs-extra: 10.0.0
-      html-webpack-plugin: 5.5.0(acorn@8.11.3)(webpack@5.90.3)
+      html-webpack-plugin: 5.5.0(webpack@5.90.3)
       identity-obj-proxy: 3.0.0
       jest: 27.4.5
       jest-resolve: 27.4.5
@@ -8185,12 +8181,12 @@ packages:
       source-map-loader: 3.0.0(webpack@5.90.3)
       style-loader: 3.3.1(webpack@5.90.3)
       tailwindcss: 3.0.7(autoprefixer@10.4.18)(postcss@8.4.5)
-      terser-webpack-plugin: 5.3.0(acorn@8.11.3)(webpack@5.90.3)
+      terser-webpack-plugin: 5.3.0(webpack@5.90.3)
       typescript: 5.4.2
       webpack: 5.90.3
       webpack-dev-server: 4.6.0(webpack@5.90.3)
       webpack-manifest-plugin: 4.0.2(webpack@5.90.3)
-      workbox-webpack-plugin: 6.4.2(acorn@8.11.3)(webpack@5.90.3)
+      workbox-webpack-plugin: 6.4.2(webpack@5.90.3)
     optionalDependencies:
       fsevents: 2.3.3
     transitivePeerDependencies:
@@ -8199,7 +8195,6 @@ packages:
       - '@swc/core'
       - '@types/babel__core'
       - '@types/webpack'
-      - acorn
       - autoprefixer
       - bufferutil
       - canvas
@@ -8462,7 +8457,7 @@ packages:
       glob: 7.1.6
     dev: false
 
-  /rollup-plugin-terser@7.0.2(acorn@8.11.3)(rollup@2.61.1):
+  /rollup-plugin-terser@7.0.2(rollup@2.61.1):
     resolution: {integrity: sha512-w3iIaU4OxcF52UUXiZNsNeuXIMDvFrr+ZXK6bFZ0Q60qyVfq4uLptoS4bbq3paG3x216eQllFZX7zt6TIImguQ==}
     deprecated: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
     peerDependencies:
@@ -8472,9 +8467,7 @@ packages:
       jest-worker: 26.6.2
       rollup: 2.61.1
       serialize-javascript: 4.0.0
-      terser: 5.10.0(acorn@8.11.3)
-    transitivePeerDependencies:
-      - acorn
+      terser: 5.29.2
     dev: false
 
   /rollup@2.61.1:
@@ -9164,7 +9157,7 @@ packages:
       supports-hyperlinks: 2.1.0
     dev: false
 
-  /terser-webpack-plugin@5.3.0(acorn@8.11.3)(webpack@5.90.3):
+  /terser-webpack-plugin@5.3.0(webpack@5.90.3):
     resolution: {integrity: sha512-LPIisi3Ol4chwAaPP8toUJ3L4qCM1G0wao7L3qNv57Drezxj6+VEyySpPw4B1HSO2Eg/hDY/MNF5XihCAoqnsQ==}
     engines: {node: '>= 10.13.0'}
     peerDependencies:
@@ -9184,10 +9177,8 @@ packages:
       schema-utils: 3.1.1
       serialize-javascript: 6.0.0
       source-map: 0.6.1
-      terser: 5.10.0(acorn@8.11.3)
+      terser: 5.29.2
       webpack: 5.90.3
-    transitivePeerDependencies:
-      - acorn
     dev: false
 
   /terser-webpack-plugin@5.3.10(webpack@5.90.3):
@@ -9212,22 +9203,6 @@ packages:
       serialize-javascript: 6.0.2
       terser: 5.29.2
       webpack: 5.90.3
-    dev: false
-
-  /terser@5.10.0(acorn@8.11.3):
-    resolution: {integrity: sha512-AMmF99DMfEDiRJfxfY5jj5wNH/bYO09cniSqhfoyxc8sFoYIgkJy86G04UoZU5VjlpnplVu0K6Tx6E9b5+DlHA==}
-    engines: {node: '>=10'}
-    hasBin: true
-    peerDependencies:
-      acorn: ^8.5.0
-    peerDependenciesMeta:
-      acorn:
-        optional: true
-    dependencies:
-      acorn: 8.11.3
-      commander: 2.20.3
-      source-map: 0.7.3
-      source-map-support: 0.5.21
     dev: false
 
   /terser@5.29.2:
@@ -9832,7 +9807,7 @@ packages:
       workbox-core: 6.4.2
     dev: false
 
-  /workbox-build@6.4.2(acorn@8.11.3):
+  /workbox-build@6.4.2:
     resolution: {integrity: sha512-WMdYLhDIsuzViOTXDH+tJ1GijkFp5khSYolnxR/11zmfhNDtuo7jof72xPGFy+KRpsz6tug39RhivCj77qqO0w==}
     engines: {node: '>=10.0.0'}
     dependencies:
@@ -9852,7 +9827,7 @@ packages:
       lodash: 4.17.21
       pretty-bytes: 5.6.0
       rollup: 2.61.1
-      rollup-plugin-terser: 7.0.2(acorn@8.11.3)(rollup@2.61.1)
+      rollup-plugin-terser: 7.0.2(rollup@2.61.1)
       source-map: 0.8.0-beta.0
       source-map-url: 0.4.0
       stringify-object: 3.3.0
@@ -9876,7 +9851,6 @@ packages:
       workbox-window: 6.4.2
     transitivePeerDependencies:
       - '@types/babel__core'
-      - acorn
       - supports-color
     dev: false
 
@@ -9960,7 +9934,7 @@ packages:
     resolution: {integrity: sha512-A2qdu9TLktfIM5NE/8+yYwfWu+JgDaCkbo5ikrky2c7r9v2X6DcJ+zSLphNHHLwM/0eVk5XVf1mC5HGhYpMhhg==}
     dev: false
 
-  /workbox-webpack-plugin@6.4.2(acorn@8.11.3)(webpack@5.90.3):
+  /workbox-webpack-plugin@6.4.2(webpack@5.90.3):
     resolution: {integrity: sha512-CiEwM6kaJRkx1cP5xHksn13abTzUqMHiMMlp5Eh/v4wRcedgDTyv6Uo8+Hg9MurRbHDosO5suaPyF9uwVr4/CQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -9972,10 +9946,9 @@ packages:
       upath: 1.2.0
       webpack: 5.90.3
       webpack-sources: 1.4.3
-      workbox-build: 6.4.2(acorn@8.11.3)
+      workbox-build: 6.4.2
     transitivePeerDependencies:
       - '@types/babel__core'
-      - acorn
       - supports-color
     dev: false
 
