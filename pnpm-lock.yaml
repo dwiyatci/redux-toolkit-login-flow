@@ -2910,7 +2910,7 @@ packages:
     dependencies:
       '@babel/core': 7.16.5
       find-cache-dir: 3.3.1
-      loader-utils: 1.4.0
+      loader-utils: 1.4.2
       make-dir: 3.1.0
       schema-utils: 2.7.0
       webpack: 5.90.3
@@ -6431,8 +6431,8 @@ packages:
     engines: {node: '>=6.11.5'}
     dev: false
 
-  /loader-utils@1.4.0:
-    resolution: {integrity: sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA==}
+  /loader-utils@1.4.2:
+    resolution: {integrity: sha512-I5d00Pd/jwMD2QCduo657+YM/6L3KZu++pmX9VFncxaxvHcru9jx1lBaFft+r4Mt2jK0Yhp41XlRAihzPxHNCg==}
     engines: {node: '>=4.0.0'}
     dependencies:
       big.js: 5.2.2
