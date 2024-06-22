@@ -3,6 +3,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getCurrentUser } from '../../api/userAPI';
 import { auth } from '../../utils/auth';
 
+console.log('hi');
+console.log({ createSlice, createAsyncThunk });
+
 export const checkAuth = createAsyncThunk('signin/checkAuth', async () => {
   if (auth.isAuthenticated()) {
     const token = auth.getToken();
