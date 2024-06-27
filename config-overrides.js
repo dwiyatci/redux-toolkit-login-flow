@@ -6,6 +6,11 @@ module.exports = function override(config) {
     'process/browser': require.resolve('process/browser'),
   };
 
+  config.module.rules
+    .find((rule) => rule.oneOf)
+    ?.oneOf.find(({ type }) => type === 'asset/resource')
+    ?.exclude.push(/\.cjs$/);
+
   console.log({ config });
 
   return config;
