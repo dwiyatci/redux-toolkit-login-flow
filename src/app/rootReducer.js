@@ -1,9 +1,7 @@
-import { combineReducers } from '@reduxjs/toolkit';
+import { combineSlices } from '@reduxjs/toolkit';
 
-import { signinReducer } from '../features/signin/signinSlice';
+import signinSlice from '../features/signin/signinSlice';
 
-const rootReducer = combineReducers({
-  signin: signinReducer,
-});
+const rootReducer = combineSlices(signinSlice);
 
 export default rootReducer;
