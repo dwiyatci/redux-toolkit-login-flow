@@ -3,6 +3,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { NETWORK_LATENCY } from '../utils/constants';
 import { getUser } from './userAPI';
 
+// eslint-disable-next-line no-unused-vars
 export function signin({ username, password }, apiContext = {}) {
   return new Promise((resolve, reject) => {
     setTimeout(async () => {
@@ -26,6 +27,7 @@ export function signin({ username, password }, apiContext = {}) {
   });
 }
 
+// eslint-disable-next-line no-unused-vars
 export function signout(apiContext = {}) {
   return new Promise((resolve) => {
     setTimeout(resolve, NETWORK_LATENCY);

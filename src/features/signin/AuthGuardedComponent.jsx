@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Outlet, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, Navigate, useLocation, useNavigate } from 'react-router';
 
 import { Error } from '../../common/Error';
 import { Loading } from '../../common/Loading';

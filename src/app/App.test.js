@@ -1,6 +1,6 @@
 import { render, waitFor, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router';
 
 import store from './store';
 import App from './App';
