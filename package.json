@@ -1,6 +1,6 @@
 {
   "name": "redux-toolkit-login-flow",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "A potentially reusable formalized login flow pattern for crafting web development project",
   "keywords": [
