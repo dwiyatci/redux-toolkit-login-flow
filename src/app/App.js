@@ -1,4 +1,4 @@
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link } from 'react-router';
 
 import { DummyPage } from '../common/DummyPage';
 import { LandingPage } from '../common/LandingPage';
