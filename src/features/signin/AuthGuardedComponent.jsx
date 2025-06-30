@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet, Navigate, useLocation, useNavigate } from 'react-router';
 
-import { Error } from '../../common/Error';
+import { MemoizedErrorDisplay as ErrorDisplay } from '../../common/ErrorDisplay';
 import { Loading } from '../../common/Loading';
 import { checkAuth, logout, selectSignin } from './signinSlice';
 
@@ -19,7 +19,7 @@ export function AuthGuardedComponent() {
     <Loading />
   ) : (
     <>
-      {error && <Error message={error.message} />}
+      {error && <ErrorDisplay message={error.message} />}
       <RoutedComponent />
     </>
   );
