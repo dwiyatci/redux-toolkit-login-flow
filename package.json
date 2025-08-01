@@ -24,10 +24,9 @@
     "rd": "pnpm reinstall:dedupe",
     "reinstall:dedupe": "pnpm dedupe && pnpm install",
     "upgr": "pnpm upgrade --recursive --latest --interactive",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "vite",
+    "build": "vite build",
+    "test": "vitest",
     "format": "prettier --write \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,css,less,sass,scss,md,sh,graphql,gql}\"",
     "format:check": "prettier --list-different \"{**/*,*}.{js,ts,jsx,tsx,json,yml,yaml,xml,html,less,sass,scss,md,sh,graphql,gql}\"",
     "lint": "pnpm lint:report-warnings --quiet",
@@ -39,22 +38,25 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-redux": "9.2.0",
-    "react-router": "7.6.3",
-    "react-scripts": "5.0.1"
+    "react-router": "7.6.3"
   },
   "devDependencies": {
+    "@babel/preset-flow": "7.27.1",
     "@eslint/js": "9.30.0",
-    "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.3.0",
-    "@testing-library/user-event": "14.6.1",
+    "@vitejs/plugin-react": "4.7.0",
+    "babel-plugin-syntax-hermes-parser": "0.31.0",
     "eslint": "9.30.0",
     "eslint-plugin-ft-flow": "3.0.11",
     "eslint-plugin-react": "7.37.5",
     "flow-bin": "0.274.2",
     "globals": "16.2.0",
     "hermes-eslint": "0.29.1",
-    "prettier": "3.6.2"
+    "jsdom": "26.1.0",
+    "prettier": "3.6.2",
+    "vite": "7.0.6",
+    "vitest": "3.2.4"
   },
   "browserslist": {
     "production": [
