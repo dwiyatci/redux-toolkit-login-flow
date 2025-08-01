@@ -35,24 +35,24 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.8.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "react-redux": "9.2.0",
-    "react-router": "7.6.3"
+    "react-router": "7.7.1"
   },
   "devDependencies": {
     "@babel/preset-flow": "7.27.1",
-    "@eslint/js": "9.30.0",
-    "@testing-library/jest-dom": "6.6.3",
+    "@eslint/js": "9.32.0",
+    "@testing-library/jest-dom": "6.6.4",
     "@testing-library/react": "16.3.0",
     "@vitejs/plugin-react": "4.7.0",
     "babel-plugin-syntax-hermes-parser": "0.31.0",
-    "eslint": "9.30.0",
+    "eslint": "9.32.0",
     "eslint-plugin-ft-flow": "3.0.11",
     "eslint-plugin-react": "7.37.5",
-    "flow-bin": "0.274.2",
-    "globals": "16.2.0",
-    "hermes-eslint": "0.29.1",
+    "flow-bin": "0.278.0",
+    "globals": "16.3.0",
+    "hermes-eslint": "0.31.0",
     "jsdom": "26.1.0",
     "prettier": "3.6.2",
     "vite": "7.0.6",
@@ -71,6 +71,6 @@
     ]
   },
   "volta": {
-    "node": "24.3.0"
+    "node": "22.18.0"
   }
 }
