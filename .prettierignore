@@ -2,3 +2,4 @@
 .idea
 
 pnpm-lock.yaml
+dist

@@ -6,7 +6,7 @@ A potentially reusable formalized login flow pattern for crafting web developmen
 
 Contrary to popular belief, never in my career as a Software Engineer that I build login/signin/auth page myself (I've always been working on projects where the auth flow is already provided or where login is not required 😋). So on this one long weekend during [self-quarantine period of the outbreak in 2020](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic), finally I've got some spare time to implement my take on it, while doing some transcendental explorations on React, React Router, and Redux Toolkit.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project was originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (and then migrated to [Vite](https://github.com/vitejs/vite) because [CRA was being sunset in 2025](https://react.dev/blog/2025/02/14/sunsetting-create-react-app)), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ![Screenshot of the app](artifacts/screenshot.png)
 
