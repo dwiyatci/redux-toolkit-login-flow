@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet, Navigate, useLocation, useNavigate } from 'react-router';
 
-import { MemoizedErrorDisplay as ErrorDisplay } from '../../common/ErrorDisplay';
+import { ErrorDisplay } from '../../common/ErrorDisplay';
 import { Loading } from '../../common/Loading';
 import { checkAuth, logout, selectSignin } from './signinSlice';
 

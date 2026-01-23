@@ -1,18 +1,11 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import pluginReact from 'eslint-plugin-react';
-import hermesESLintParser from 'hermes-eslint';
-import pluginFtFlow from 'eslint-plugin-ft-flow';
 
-/** @type {import('eslint').Linter.Config[]} */
 export default [
   { files: ['**/*.{js,mjs,cjs,jsx}'] },
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
-  {
-    plugins: { 'ft-flow': pluginFtFlow },
-    rules: pluginFtFlow.configs.recommended.rules,
-  },
   {
     languageOptions: {
       globals: {
@@ -21,8 +14,6 @@ export default [
         ...globals.jest,
         ...globals.mocha,
       },
-
-      parser: hermesESLintParser,
     },
 
     settings: {
@@ -34,6 +25,7 @@ export default [
     rules: {
       'react/react-in-jsx-scope': 'off',
       'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
+      'react/prop-types': 'off',
     },
   },
 ];
