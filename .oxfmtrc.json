@@ -1,0 +1,5 @@
+{
+  "singleQuote": true,
+  "printWidth": 100,
+  "ignorePatterns": [".vscode", "pnpm-lock.yaml", "dist"]
+}
